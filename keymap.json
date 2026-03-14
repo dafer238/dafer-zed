@@ -11,8 +11,8 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-alt-t": "workspace::NewTerminal",
-      "ctrl-j": null
-    }
+      "ctrl-j": null,
+    },
   },
   // ── Editor Navigation  ────────────────
   {
@@ -40,8 +40,8 @@
       "ctrl-k ctrl-h": null,
       "ctrl-k ctrl-j": null,
       "ctrl-k ctrl-k": null,
-      "ctrl-k ctrl-l": null
-    }
+      "ctrl-k ctrl-l": null,
+    },
   },
   // ── Editor Navigation (Normal mode, Vim mode enabled, full mode) ────────────────
   {
@@ -64,22 +64,23 @@
       // Convenience shortcuts
       "space f m": "editor::Format",
       "space s f": "file_finder::Toggle",
-      "space s g": "project_search::ToggleFocus",
+      "space s g": "pane::DeploySearch",
       "space c a": "editor::ToggleCodeActions",
       "space d b": "debugger::Start",
       "space s n": "zed::OpenSettings",
       "space t": "project_panel::ToggleFocus",
       "space g g": "git_panel::ToggleFocus",
-      "space r": "task::Spawn"
-    }
+      "space r": "task::Spawn",
+      "space w w": "editor::ToggleSoftWrap",
+    },
   },
   // ── Code Actions Navigation ─────────────────────
   {
     "context": "showing_code_actions",
     "bindings": {
       "j": "editor::ContextMenuNext",
-      "k": "editor::ContextMenuPrevious"
-    }
+      "k": "editor::ContextMenuPrevious",
+    },
   },
 
   // ── Empty Pane bindings ───────────────
@@ -90,8 +91,8 @@
       ";": "command_palette::Toggle",
       "space t": "project_panel::ToggleFocus",
       "space g g": "git_panel::ToggleFocus",
-      "ctrl-l": "editor::ToggleFocus"
-    }
+      "ctrl-l": "editor::ToggleFocus",
+    },
   },
 
   // ── Explorer Panel (Project Panel when not editing) ───────────────
@@ -105,8 +106,8 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
   },
 
   // ── Git Panel (Changes List) ───────────────
@@ -120,16 +121,16 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
   },
 
   // ── Insert mode convenience (Vim insert mode) ──────────────────────
   {
     "context": "Editor && vim_mode == insert && !VimWaiting && !menu",
     "bindings": {
-      "j k": "vim::NormalBefore"
-    }
+      "j k": "vim::NormalBefore",
+    },
   },
 
   // ── Terminal focus ───────────────────────────────
@@ -142,8 +143,8 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
   },
 
   // ── Debug Panel focus ───────────────────────────────
@@ -156,19 +157,19 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
   },
   {
     "context": "!Terminal",
     "bindings": {
-      "ctrl-alt-shift-c": "collab_panel::ToggleFocus"
-    }
+      "ctrl-alt-shift-c": "collab_panel::ToggleFocus",
+    },
   },
   {
     "context": "!Terminal",
     "bindings": {
-      "ctrl-shift-c": null
-    }
-  }
+      "ctrl-shift-c": null,
+    },
+  },
 ]
