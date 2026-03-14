@@ -98,11 +98,30 @@
   // AI and Agent configuration
   "disable_ai": false,
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "zed.dev",
+        "model": "claude-sonnet-4-6",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "zed.dev",
+        "model": "claude-haiku-4-5",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "zed.dev",
+        "model": "gpt-5.4",
+        "enable_thinking": false,
+      },
+    ],
     "default_model": {
-      "model": "claude-sonnet-4.6",
-      "provider": "copilot_chat",
+      "effort": "high",
+      "enable_thinking": true,
+      "model": "claude-sonnet-4-6",
+      "provider": "zed.dev",
     },
-    "default_profile": "",
+    "default_profile": "write",
     "notify_when_agent_waiting": "all_screens",
     "play_sound_when_agent_done": true,
   },
