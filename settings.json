@@ -8,6 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // Appearance and UI settings
+  "cli_default_open_behavior": "new_window",
   "buffer_font_family": "CaskaydiaCove Nerd Font",
   "buffer_font_size": 20.0,
   "icon_theme": {
@@ -18,7 +19,7 @@
   "relative_line_numbers": "disabled",
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "tab_bar": {
-    "show": true,
+    "show": false,
   },
   "tabs": {
     "file_icons": true,
@@ -31,7 +32,7 @@
     "mode": "system",
   },
   "title_bar": {
-    "show_branch_icon": true,
+    "show_branch_status_icon": true,
   },
   "toolbar": {
     "breadcrumbs": false,
@@ -63,11 +64,39 @@
   // Language-specific settings
   "languages": {
     "Python": {
-      "language_servers": [
-        // "basedpyright",
-        "ruff",
-        "ty",
-      ],
+      "language_servers": ["!basedpyright", "ruff", "ty"],
+    },
+    "LaTeX": { "language_servers": ["texlab", "vale"], "format_on_save": "off" },
+  },
+
+  // LSP
+  "lsp": {
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "executable": "latexmk",
+            "args": ["-interaction=nonstopmode", "-synctex=1", "%f"],
+            "onSave": true,
+            "forwardSearchAfter": true,
+          },
+          "forwardSearch": {
+            "executable": "sioyek",
+            "args": [
+              "--reuse-window",
+              "--forward-search-file",
+              "%f",
+              "--forward-search-line",
+              "%l",
+              "%p",
+            ],
+          },
+          "chktex": {
+            "onOpenAndSave": true,
+            "onEdit": false,
+          },
+        },
+      },
     },
   },
 
@@ -77,6 +106,7 @@
   },
   "file_scan_exclusions": ["**/__pycache__", "**/.vscode"],
   "project_panel": {
+    "dock": "right",
     "entry_spacing": "standard",
   },
 
@@ -91,39 +121,22 @@
   "diagnostics": {
     "inline": {
       "enabled": true,
-      "min_column": 50,
     },
   },
 
   // AI and Agent configuration
   "disable_ai": false,
   "agent": {
-    "favorite_models": [
-      {
-        "provider": "zed.dev",
-        "model": "claude-sonnet-4-6",
-        "enable_thinking": false,
-      },
-      {
-        "provider": "zed.dev",
-        "model": "claude-haiku-4-5",
-        "enable_thinking": false,
-      },
-      {
-        "provider": "zed.dev",
-        "model": "gpt-5.4",
-        "enable_thinking": false,
-      },
-    ],
+    "dock": "right",
     "default_model": {
       "effort": "high",
       "enable_thinking": true,
       "model": "claude-sonnet-4-6",
       "provider": "zed.dev",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
     "notify_when_agent_waiting": "all_screens",
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "always",
   },
   "show_edit_predictions": false,
 }

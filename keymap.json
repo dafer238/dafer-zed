@@ -11,7 +11,11 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-alt-t": "workspace::NewTerminal",
-      "ctrl-j": null,
+      // Panel toggles and focuses
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
     },
   },
   // ── Editor Navigation  ────────────────
@@ -45,7 +49,7 @@
   },
   // ── Editor Navigation (Normal mode, Vim mode enabled, full mode) ────────────────
   {
-    "context": "Editor && !menu && mode!=single_line && vim_mode != insert",
+    "context": "Editor && !menu && mode!=single_line && vim_mode != insert && !ProjectSearchBar && !BufferSearchBar",
     "bindings": {
       // Command palette and tab switching
       ";": "command_palette::Toggle",
@@ -91,7 +95,6 @@
       ";": "command_palette::Toggle",
       "space t": "project_panel::ToggleFocus",
       "space g g": "git_panel::ToggleFocus",
-      "ctrl-l": "editor::ToggleFocus",
     },
   },
 
@@ -101,7 +104,7 @@
     "bindings": {
       "space": null,
       ";": "command_palette::Toggle",
-      "space t": "workspace::ToggleLeftDock",
+      "space t": "project_panel::Toggle",
       "space g g": "git_panel::ToggleFocus",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
@@ -117,7 +120,7 @@
       "space": null,
       ";": "command_palette::Toggle",
       "space t": "project_panel::ToggleFocus",
-      "space g g": "workspace::ToggleLeftDock",
+      "space g g": "git_panel::Toggle",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
@@ -158,18 +161,6 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
-    },
-  },
-  {
-    "context": "!Terminal",
-    "bindings": {
-      "ctrl-alt-shift-c": "collab_panel::ToggleFocus",
-    },
-  },
-  {
-    "context": "!Terminal",
-    "bindings": {
-      "ctrl-shift-c": null,
     },
   },
 ]

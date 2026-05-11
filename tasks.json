@@ -14,28 +14,28 @@
     "reveal": "no_focus"
   },
   {
-    "label": "Run (cargo): $ZED_FILENAME",
+    "label": "Build and run (cargo): $ZED_FILENAME",
     "command": "cargo",
     "args": ["run"],
     "cwd": "$ZED_DIRNAME",
     "reveal": "no_focus"
   },
   {
-    "label": "Run (zig): $ZED_FILENAME",
+    "label": "Build and run (zig): $ZED_FILENAME",
     "command": "zig",
     "args": ["build", "run"],
     "cwd": "$ZED_DIRNAME",
     "reveal": "no_focus"
   },
   {
-    "label": "Run (C - Linux): $ZED_FILENAME",
+    "label": "Build and run (C - Linux): $ZED_FILENAME",
     "command": "bash",
     "args": ["-c", "clang '$ZED_FILE' -o '$ZED_DIRNAME/a.out' && '$ZED_DIRNAME/a.out'"],
     "cwd": "$ZED_DIRNAME",
     "reveal": "no_focus"
   },
   {
-    "label": "Run (C - Windows): $ZED_FILENAME",
+    "label": "Build and run (C - Windows): $ZED_FILENAME",
     "command": "powershell",
     "args": [
       "clang.exe",
@@ -49,14 +49,14 @@
     "reveal": "no_focus"
   },
   {
-    "label": "Run (C++ - Linux): $ZED_FILENAME",
+    "label": "Build and run (C++ - Linux): $ZED_FILENAME",
     "command": "bash",
     "args": ["-c", "clang++ '$ZED_FILE' -o '$ZED_DIRNAME/a.out' && '$ZED_DIRNAME/a.out'"],
     "cwd": "$ZED_DIRNAME",
     "reveal": "no_focus"
   },
   {
-    "label": "Run (C++ - Windows): $ZED_FILENAME",
+    "label": "Build and run (C++ - Windows): $ZED_FILENAME",
     "command": "powershell",
     "args": [
       "clang++.exe",
