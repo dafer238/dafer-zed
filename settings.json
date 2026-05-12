@@ -104,10 +104,12 @@
   "file_finder": {
     "modal_max_width": "large",
   },
-  "file_scan_exclusions": ["**/__pycache__", "**/.vscode"],
+  "file_scan_exclusions": ["**/__pycache__", "**/.vscode", "**/.git"],
   "project_panel": {
     "dock": "right",
     "entry_spacing": "standard",
+    "git_status_indicator": true,
+    "folder_icons" : false,
   },
 
   // Terminal settings

@@ -110,6 +110,8 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-enter": "project_panel::Open",
+      "enter": ["workspace::SendKeystrokes", "ctrl-enter space t"]
     },
   },
 
