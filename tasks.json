@@ -1,72 +1,58 @@
 [
   {
     "label": "Run (Python): $ZED_FILENAME",
-    "command": "$ZED_PYTHON",
+    "command": "python",
     "args": ["$ZED_FILE"],
     "cwd": "$ZED_WORKTREE_ROOT",
-    "reveal": "no_focus"
+    "reveal": "no_focus",
   },
   {
     "label": "Run (uv): $ZED_FILENAME",
     "command": "uv",
     "args": ["run", "$ZED_FILE"],
     "cwd": "$ZED_DIRNAME",
-    "reveal": "no_focus"
+    "reveal": "no_focus",
   },
   {
     "label": "Build and run (cargo): $ZED_FILENAME",
     "command": "cargo",
     "args": ["run"],
     "cwd": "$ZED_DIRNAME",
-    "reveal": "no_focus"
+    "reveal": "no_focus",
   },
   {
     "label": "Build and run (zig): $ZED_FILENAME",
     "command": "zig",
     "args": ["build", "run"],
     "cwd": "$ZED_DIRNAME",
-    "reveal": "no_focus"
+    "reveal": "no_focus",
   },
   {
     "label": "Build and run (C - Linux): $ZED_FILENAME",
     "command": "bash",
     "args": ["-c", "clang '$ZED_FILE' -o '$ZED_DIRNAME/a.out' && '$ZED_DIRNAME/a.out'"],
     "cwd": "$ZED_DIRNAME",
-    "reveal": "no_focus"
+    "reveal": "no_focus",
   },
   {
     "label": "Build and run (C - Windows): $ZED_FILENAME",
     "command": "powershell",
-    "args": [
-      "clang.exe",
-      "$ZED_FILE",
-      "-o",
-      "$ZED_DIRNAME\\a.exe",
-      ";",
-      "$ZED_DIRNAME\\a.exe"
-    ],
+    "args": ["clang.exe", "$ZED_FILE", "-o", "$ZED_DIRNAME\\a.exe", ";", "$ZED_DIRNAME\\a.exe"],
     "cwd": "$ZED_DIRNAME",
-    "reveal": "no_focus"
+    "reveal": "no_focus",
   },
   {
     "label": "Build and run (C++ - Linux): $ZED_FILENAME",
     "command": "bash",
     "args": ["-c", "clang++ '$ZED_FILE' -o '$ZED_DIRNAME/a.out' && '$ZED_DIRNAME/a.out'"],
     "cwd": "$ZED_DIRNAME",
-    "reveal": "no_focus"
+    "reveal": "no_focus",
   },
   {
     "label": "Build and run (C++ - Windows): $ZED_FILENAME",
     "command": "powershell",
-    "args": [
-      "clang++.exe",
-      "$ZED_FILE",
-      "-o",
-      "$ZED_DIRNAME\\a.exe",
-      ";",
-      "$ZED_DIRNAME\\a.exe"
-    ],
+    "args": ["clang++.exe", "$ZED_FILE", "-o", "$ZED_DIRNAME\\a.exe", ";", "$ZED_DIRNAME\\a.exe"],
     "cwd": "$ZED_DIRNAME",
-    "reveal": "no_focus"
-  }
+    "reveal": "no_focus",
+  },
 ]
